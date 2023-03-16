@@ -15,7 +15,7 @@ window.GAME = _0x43cd9a['Core'];
 ```
 之后释放断点。继续游戏
 
-##修改脚本
+## 修改脚本
 ```js
 //金币
 GAME.PlayerOptions.Coins=1e6
