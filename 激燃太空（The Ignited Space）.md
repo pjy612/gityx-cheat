@@ -4,13 +4,13 @@ http://www.gityx.com/g8hh/hanhuazhong/694.html
 https://g1tyx.github.io/the-ignited-space/
 
 ## 前置操作
-![image](https://github.com/pjy612/gityx-cheat/assets/4072526/85b8581a-81fe-4065-904e-1f4fd6ea6407)
+![image](https://github.com/pjy612/gityx-cheat/assets/4072526/85b8581a-81fe-4065-904e-1f4fd6ea6407)  
 图上位置打断点，然后 控制台 输入 
 ```js
 INS = t.instance;
 ```
-![image](https://github.com/pjy612/gityx-cheat/assets/4072526/4fca864f-4814-4e8d-9740-1a49e097b2e5)
-也可以使用条件断点,进行自动赋值 并不用断下来。
+![image](https://github.com/pjy612/gityx-cheat/assets/4072526/4fca864f-4814-4e8d-9740-1a49e097b2e5)  
+也可以使用条件断点,进行自动赋值 并不用断下来。  
 ```js
 INS = t.instance,false
 ```
