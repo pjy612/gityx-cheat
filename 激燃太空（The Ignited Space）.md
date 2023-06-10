@@ -16,7 +16,7 @@ INS = t.instance,false
 ```
 ## 修改脚本
 ```js
-//资源不增反加
+//资源不减反加
 if(!INS.resources.addResource_o){
 INS.resources.addResource_o = INS.resources.addResource;
 INS.resources.subtractResource = INS.resources.addResource;
