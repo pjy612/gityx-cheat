@@ -1,4 +1,7 @@
 # 基本原理（Fundamental）
+https://gityx.com/g8hh/yihanhua/641.html
+
+https://gityxs.github.io/fundamental/
 
 ## 前置步骤
 Chrome 的 开发工具中 点击右上角齿轮 打开设置界面  
