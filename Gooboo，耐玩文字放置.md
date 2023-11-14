@@ -96,4 +96,44 @@ if(j.needed)
     j.needed = 1;
 }
 })
+
+//部落 装备升级低价格 技能低冷却
+function hook_horde_items_price(u)
+{
+    let t = 'price';
+    let handler = {
+        apply: function (target, thisArg, ...argumentsList) {
+            let ret = Reflect.apply(...arguments);
+            if('number'==typeof(ret))
+            {
+                ret = 0;
+            }
+            return ret;
+        }
+    };
+    if(u[t])
+    {
+    if(!u[`__${t}`]) u[`__${t}`] = u[t];
+    u[t] = new Proxy(u[`__${t}`],handler);
+    }
+}
+Object.values(VUE.$store.state.horde.items).forEach(i=>{
+    hook_horde_items_price(i);
+    if(i.cooldown) i.cooldown = ()=>0.1;
+});
+
+//农场 快速成长 作物免费 稀有翻倍
+Object.values(VUE.$store.state.farm.crop).forEach(c=>{
+if(c.grow)
+{
+    c.grow = 0.001;
+}
+if(c.cost>0)
+{
+    c.cost = 0;
+}
+Object.values(c.rareDrop).forEach(d=>{
+    d.chance = 10;
+});
+});
 ```
