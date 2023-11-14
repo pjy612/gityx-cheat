@@ -33,10 +33,10 @@ function hookupgradePrice(u)
         return ret;
       }
     };
-if(u[t])
-{
-    if(!u[`__${t}`]) u[`__${t}`] = u[t];
-    u[t] = new Proxy(u[`__${t}`],handler);
+    if(u[t])
+    {    
+        if(!u[`__${t}`]) u[`__${t}`] = u[t];
+        u[t] = new Proxy(u[`__${t}`],handler);
     }
 }
 
@@ -55,8 +55,8 @@ function hooktimeNeed(u)
     };
     if(u[t])
     {
-    if(!u[`__${t}`]) u[`__${t}`] = u[t];
-    u[t] = new Proxy(u[`__${t}`],handler);
+        if(!u[`__${t}`]) u[`__${t}`] = u[t];
+        u[t] = new Proxy(u[`__${t}`],handler);
     }
 }
 Object.values(VUE.$store.state.upgrade.item).forEach(u=>{
